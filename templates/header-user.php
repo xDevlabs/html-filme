@@ -8,7 +8,7 @@
                 </figure>
             </a>
             
-            <form action="#">
+            <form action="#" class="form-search">
                 <input type="text" placeholder="Search">
             </form>
         </div>

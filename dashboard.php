@@ -1,162 +1,47 @@
 <?php
 include_once "includes/functions.php";
 template_part('header-user',[
-    'page_title' => 'Artics',
+    'page_title' => 'アカウント',
     'page_description' => '',
-    'class' => 'artis-page',
-    'page' => 'artis'
+    'class' => 'dashboard-page',
+    'page' => 'dashboard'
 ]);
 ?>
 <section class="main">
     <div class="container">
-        <?php template_part('sidebar-none')?>
+        <aside class="sidebar-left">
+            <ul>
+                <li class="active">
+                    <a href="dashboard.php">アカウント</a>
+                </li>
+                <li>
+                    <a href="user-content.php">購入コンテンツ</a>
+                </li>
+            </ul>
+        </aside>
         <div class="content">
-            <div class="user-detail">
-               <div class="user-detail--info">
-                    <figure>
-                        <img src="<?php assets('images/mycon.png')?>" alt="">
-                    </figure>
-                    <div  class="user--text">
-                        <h2>Artis name</h2>
-                        <span>お気に入り登録数</span>
-                        <p>Artist info</p>
-                        <small>もっと見る</small>
-                    </div>
-               </div>
-               <div class="user-share">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <img src="<?php assets('images/star.svg')?>" alt="">
-                                <span>560</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="<?php assets('images/twitter.svg')?>" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="<?php assets('images/instagram.svg')?>" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="<?php assets('images/share-color.svg')?>" alt="">
-                            </a>
-                        </li>
-                    </ul>
-               </div>
+            <div class="breadcurmbs">
+                <a href="#">
+                    <svg width="13" height="17" viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.87512 8.12488C3.87512 7.86888 3.97263 7.61337 4.16813 7.41787L8.29313 3.29287C8.68362 2.90237 9.31662 2.90237 9.70713 3.29287C10.0976 3.68338 10.0976 4.31638 9.70713 4.70687L6.28912 8.12488L9.70713 11.5429C10.0976 11.9334 10.0976 12.5664 9.70713 12.9569C9.31662 13.3474 8.68362 13.3474 8.29313 12.9569L4.16813 8.83187C3.97263 8.63637 3.87512 8.38088 3.87512 8.12488Z" fill="#D8D8D8"/>
+                        </g>
+                        <defs>
+                        <filter id="filter0_d" x="0.875244" y="0" width="12.1249" height="16.2498" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset/>
+                        <feGaussianBlur stdDeviation="1.5"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                        </filter>
+                        </defs>
+                    </svg>
+                    <span>アカウントを編集</span>
+                </a>
             </div>
 
-            <div class="user-list">
-                <h3>関連アーティスト</h3>
-
-                <ul>
-                    <li>
-                        <a href="#">
-                            <figure class="avatar-rounded">
-                                <img src="<?php assets('images/avatar.png')?>" alt="">
-                            </figure>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <figure class="avatar-rounded">
-                                <img src="<?php assets('images/avatar.png')?>" alt="">
-                            </figure>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <figure class="avatar-rounded">
-                                <img src="<?php assets('images/avatar.png')?>" alt="">
-                            </figure>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <figure class="avatar-rounded">
-                                <img src="<?php assets('images/avatar.png')?>" alt="">
-                            </figure>
-                        </a>
-                    </li>
-                    
-                </ul>
-            </div>
-
-            <div class="more-video mt-15">
-                <h3>関連動画</h3>
-
-                <?php 
-                    template_part('list', [
-                        'class' => 'three-items no-border',
-                        'list' => [
-                            [
-                                'title' => 'Clip title',
-                                'image' => 'images/clip.png',
-                                'artis' => [
-                                    'avatar' => 'images/avatar.png',
-                                    'name' => 'artist name',
-                                    'text' => 'Play_num + upload_date',
-                                    'class' => ''
-                                ]
-                            ],
-                            [
-                                'title' => 'Clip title',
-                                'image' => 'images/clip.png',
-                                'artis' => [
-                                    'avatar' => 'images/avatar.png',
-                                    'name' => 'artist name',
-                                    'text' => 'Play_num + upload_date',
-                                    'class' => ''
-                                ]
-                            ],
-                            [
-                                'title' => 'Clip title',
-                                'image' => 'images/clip.png',
-                                'artis' => [
-                                    'avatar' => 'images/avatar.png',
-                                    'name' => 'artist name',
-                                    'text' => 'Play_num + upload_date',
-                                    'class' => ''
-                                ]
-                            ],
-                            [
-                                'title' => 'Clip title',
-                                'image' => 'images/clip.png',
-                                'artis' => [
-                                    'avatar' => 'images/avatar.png',
-                                    'name' => 'artist name',
-                                    'text' => 'Play_num + upload_date',
-                                    'class' => ''
-                                ]
-                            ],
-                            [
-                                'title' => 'Clip title',
-                                'image' => 'images/clip.png',
-                                'artis' => [
-                                    'avatar' => 'images/avatar.png',
-                                    'name' => 'artist name',
-                                    'text' => 'Play_num + upload_date',
-                                    'class' => ''
-                                ]
-                            ],
-                            [
-                                'title' => 'Clip title',
-                                'image' => 'images/clip.png',
-                                'artis' => [
-                                    'avatar' => 'images/avatar.png',
-                                    'name' => 'artist name',
-                                    'text' => 'Play_num + upload_date',
-                                    'class' => ''
-                                ]
-                            ],
-                        ]
-                    ]);
-                ?>
-            </div>
         </div>
 
         <?php template_part('sidebar-none')?>

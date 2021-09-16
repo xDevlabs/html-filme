@@ -24,18 +24,6 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-
-        form {
-            input {
-                width: 200px;
-                min-width: initial;
-                height: 29px;
-                background: url(../images/search-icon.svg) no-repeat 10px 6px;
-                background-size: 16px 16px;
-                padding-left: 35px;
-                padding-block: 5px;
-            }
-        }
     }
 
     &__logo {
@@ -88,7 +76,17 @@
                 margin-right: 10px;
             }
         }
+    }
+}
 
-
+.form-search {
+    input {
+        width: 200px;
+        min-width: initial;
+        height: 29px;
+        background: url(../images/search-icon.svg) no-repeat 10px 6px;
+        background-size: 16px 16px;
+        padding-left: 35px;
+        padding-block: 5px;
     }
 }

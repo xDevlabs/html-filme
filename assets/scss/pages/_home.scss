@@ -376,6 +376,31 @@ aside {
     @include breakpoint(tablet) {
         width: 212px;
     }
+
+    &.sidebar-left {
+        ul {
+            @extend %reset-list;
+            li {
+                width: 100%;
+                border-bottom: 1px solid #969696;
+
+                a {
+                    display: flex;
+                    width: 100%;
+                    padding: 5px;
+                    min-height: 40px;
+                    align-items: center;
+                    color: var(--white);
+                }
+
+                &.active {
+                    a {
+                        color: var(--primary);
+                    }
+                }
+            }
+        }
+    }
 }
 
 .more-video {
@@ -653,5 +678,14 @@ aside {
                 height: 36px;
             }
         }
+    }
+}
+
+.search-music {
+    margin-block: 10px;
+
+    input {
+        min-width: 320px;
+        width: initial;
     }
 }
