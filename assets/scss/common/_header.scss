@@ -67,5 +67,28 @@
             min-height: initial;
             margin-left: 10px;
         }
+        
+        .donate {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            min-width: 220px;
+
+            a {
+                line-height: 38px;
+            }
+        }
+
+        .user {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            figure {
+                margin-right: 10px;
+            }
+        }
+
+
     }
 }

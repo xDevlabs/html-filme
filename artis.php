@@ -1,95 +1,92 @@
 <?php
 include_once "includes/functions.php";
-template_part('header-page',[
-    'page_title' => 'Player page',
+template_part('header-user',[
+    'page_title' => 'Artics',
     'page_description' => '',
-    'class' => 'player-page',
-    'page' => 'player'
+    'class' => 'artis-page',
+    'page' => 'artis'
 ]);
 ?>
 <section class="main">
     <div class="container">
         <?php template_part('sidebar-none')?>
         <div class="content">
-            <div class="player video-detail">
-                <div class="embed_player">
-                    <iframe   iframe width="560" height="315" src="https://www.youtube.com/embed/06eSsOWcKYA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div class="frame">
-                        <span>time</span>
-                        <span>end_time</span>
+            <div class="user-detail">
+               <div class="user-detail--info">
+                    <figure>
+                        <img src="<?php assets('images/mycon.png')?>" alt="">
+                    </figure>
+                    <div  class="user--text">
+                        <h2>Artis name</h2>
+                        <span>お気に入り登録数</span>
+                        <p>Artist info</p>
+                        <small>もっと見る</small>
                     </div>
-                </div>
+               </div>
+               <div class="user-share">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="<?php assets('images/star.svg')?>" alt="">
+                                <span>560</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="<?php assets('images/twitter.svg')?>" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="<?php assets('images/instagram.svg')?>" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="<?php assets('images/share-color.svg')?>" alt="">
+                            </a>
+                        </li>
+                    </ul>
+               </div>
+            </div>
 
-                <div class="video-detail--title">
-                    <div class="video--title">
-                        <h2>Video title</h2>
-                        <div class="action active">
-                            <a href="#" class="like"><span>Like</span></a>
-                        </div>
-                    </div>
-                    <p>Play_num + upload_date</p>
-                </div>
+            <div class="user-list">
+                <h3>関連アーティスト</h3>
 
-                <div class="video-detail--footer">
-                    <div class="user-info">
-                        <div class="user-info__text">
-                            <figure>
-                                <img src="<?php assets('images/avatar.png');?>" alt="">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <figure class="avatar-rounded">
+                                <img src="<?php assets('images/avatar.png')?>" alt="">
                             </figure>
-                            <div>
-                                <a href="#">user name</a>
-                                <p>&nbsp;</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="info-course">
-                        <a href="#" class="share-social">シェアする。紹介者が購入 5％pt バック</a>
-                        <span class="price">¥500-</span>
-                    </div>
-                </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <figure class="avatar-rounded">
+                                <img src="<?php assets('images/avatar.png')?>" alt="">
+                            </figure>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <figure class="avatar-rounded">
+                                <img src="<?php assets('images/avatar.png')?>" alt="">
+                            </figure>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <figure class="avatar-rounded">
+                                <img src="<?php assets('images/avatar.png')?>" alt="">
+                            </figure>
+                        </a>
+                    </li>
+                    
+                </ul>
             </div>
 
-            <div class="video__info">
-                <p>info</p>
-            </div>
-
-            <div class="comment__list">
-                
-                <div class="comment-item">
-                    <div class="comment-item__title">
-                        <a href="#">全員参加</a>
-                        <h3>イベントタイトル</h3>
-                    </div>
-                    <div class="comment-item__content">
-                        <div class="comment-item__info">
-                            <span>特典内容 : 〇〇プレゼント</span>
-                            <span>開催期間 : 2021/12/31 まで</span>
-                        </div>
-                        <div class="comment-item__text">イベント詳細</div>
-
-                        <div class="comment-item__footer"><span>0000/0000pt</span></div>
-                    </div>
-                </div>
-                
-                <div class="comment-item">
-                    <div class="comment-item__title">
-                        <a href="#">全員参加</a>
-                        <h3>イベントタイトル</h3>
-                    </div>
-                    <div class="comment-item__content">
-                        <div class="comment-item__info">
-                            <span>特典内容 : 〇〇プレゼント</span>
-                            <span>開催期間 : 2021/12/31 まで</span>
-                        </div>
-                        <div class="comment-item__text">イベント詳細</div>
-
-                        <div class="comment-item__footer"><span>0000/0000pt</span></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="more-video">
+            <div class="more-video mt-15">
                 <h3>関連動画</h3>
 
                 <?php 
