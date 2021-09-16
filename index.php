@@ -1,6 +1,6 @@
 <?php
 include_once "includes/functions.php";
-template_part('header',[
+template_part('header-page',[
     'page_title' => 'Home page',
     'page_description' => '',
     'class' => 'home-page',
@@ -29,59 +29,60 @@ template_part('header',[
 
                 <?php 
                     template_part('list', [
-                        [
-                            'title' => 'Clip title',
-                            'image' => 'images/clip.png',
-                            'share_text' => '購入したらシェアした人に 5％pt バック',
-                            'description' => 'info',
-                            'price' => '¥500-',
-                            'artis' => [
-                                'avatar' => 'images/avatar.png',
-                                'name' => 'artist name',
-                                'text' => 'Play_num + upload_date',
-                                'class' => ''
-                            ]
-                        ],
-                        [
-                            'title' => 'Clip title',
-                            'image' => 'images/clip.png',
-                            'share_text' => '購入したらシェアした人に 5％pt バック',
-                            'description' => 'info',
-                            'price' => '¥500-',
-                            'artis' => [
-                                'avatar' => 'images/avatar.png',
-                                'name' => 'artist name',
-                                'text' => 'Play_num + upload_date',
-                                'class' => ''
-                            ]
-                        ],
-                        [
-                            'title' => 'Clip title',
-                            'image' => 'images/clip.png',
-                            'share_text' => '購入したらシェアした人に 5％pt バック',
-                            'description' => 'info',
-                            'price' => '¥500-',
-                            'artis' => [
-                                'avatar' => 'images/avatar.png',
-                                'name' => 'artist name',
-                                'text' => 'Play_num + upload_date',
-                                'class' => ''
-                            ]
-                        ],
-                        [
-                            'title' => 'Clip title',
-                            'image' => 'images/clip.png',
-                            'share_text' => '購入したらシェアした人に 5％pt バック',
-                            'description' => 'info',
-                            'price' => '¥500-',
-                            'artis' => [
-                                'avatar' => 'images/avatar.png',
-                                'name' => 'artist name',
-                                'text' => 'Play_num + upload_date',
-                                'class' => ''
-                            ]
-                        ],
-                        
+                        'list' => [
+                            [
+                                'title' => 'Clip title',
+                                'image' => 'images/clip.png',
+                                'share_text' => '購入したらシェアした人に 5％pt バック',
+                                'description' => 'info',
+                                'price' => '¥500-',
+                                'artis' => [
+                                    'avatar' => 'images/avatar.png',
+                                    'name' => 'artist name',
+                                    'text' => 'Play_num + upload_date',
+                                    'class' => ''
+                                ]
+                            ],
+                            [
+                                'title' => 'Clip title',
+                                'image' => 'images/clip.png',
+                                'share_text' => '購入したらシェアした人に 5％pt バック',
+                                'description' => 'info',
+                                'price' => '¥500-',
+                                'artis' => [
+                                    'avatar' => 'images/avatar.png',
+                                    'name' => 'artist name',
+                                    'text' => 'Play_num + upload_date',
+                                    'class' => ''
+                                ]
+                            ],
+                            [
+                                'title' => 'Clip title',
+                                'image' => 'images/clip.png',
+                                'share_text' => '購入したらシェアした人に 5％pt バック',
+                                'description' => 'info',
+                                'price' => '¥500-',
+                                'artis' => [
+                                    'avatar' => 'images/avatar.png',
+                                    'name' => 'artist name',
+                                    'text' => 'Play_num + upload_date',
+                                    'class' => ''
+                                ]
+                            ],
+                            [
+                                'title' => 'Clip title',
+                                'image' => 'images/clip.png',
+                                'share_text' => '購入したらシェアした人に 5％pt バック',
+                                'description' => 'info',
+                                'price' => '¥500-',
+                                'artis' => [
+                                    'avatar' => 'images/avatar.png',
+                                    'name' => 'artist name',
+                                    'text' => 'Play_num + upload_date',
+                                    'class' => ''
+                                ]
+                            ],
+                        ]
                     ]);
                 ?>
             </div>

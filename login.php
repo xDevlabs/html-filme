@@ -1,17 +1,18 @@
 <?php
 include_once "includes/functions.php";
 template_part('header',[
-    'page_title' => 'Home page',
+    'page_title' => 'Login page',
     'page_description' => '',
-    'class' => 'home-page',
-    'page' => 'home'
+    'class' => 'login-page',
+    'page' => 'login'
 ]);
 ?>
 <div class="form-action">
     <div class="container">
         <figure>
-            <img src="<?php assets('logo.svg')?>" alt="">
+            <img src="<?php assets('images/logo.png')?>" alt="">
         </figure>
+
         <form action="#" method="POST" class="form">
             <div class="form__row">
                 <input type="text" name="user-name">
@@ -21,12 +22,13 @@ template_part('header',[
                 <input type="text" name="user-password">
             </div>
 
-            <div class="form-row">
+            <div class="form__row">
                 <button class="btn btn-gradient"></button>
             </div>
 
-            <p>パスワードお忘れの方はこちら</p>
-            
+            <div class="form__row mt-35">
+                <p>パスワードお忘れの方は<a href="#" target="_blank">こちら</a></p>
+            </div>
         </form>
     </div>
 </div>

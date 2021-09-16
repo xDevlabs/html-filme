@@ -5,24 +5,26 @@
 
         <?php
             template_part('list', [
-                [
-                    'title' => 'Clip title',
-                    'image' => 'images/clip.png',
-                    'artis' => [
-                        'avatar' => 'images/avatar.png',
-                        'name' => 'artist name',
-                        'text' => 'Play_num + upload_date',
-                        'class' => ''
-                    ]
-                ],
-                [
-                    'title' => 'Clip title',
-                    'image' => 'images/clip.png',
-                    'artis' => [
-                        'avatar' => 'images/avatar.png',
-                        'name' => 'artist name',
-                        'text' => 'Play_num + upload_date',
-                        'class' => ''
+                'list' => [
+                    [
+                        'title' => 'Clip title',
+                        'image' => 'images/clip.png',
+                        'artis' => [
+                            'avatar' => 'images/avatar.png',
+                            'name' => 'artist name',
+                            'text' => 'Play_num + upload_date',
+                            'class' => ''
+                        ]
+                    ],
+                    [
+                        'title' => 'Clip title',
+                        'image' => 'images/clip.png',
+                        'artis' => [
+                            'avatar' => 'images/avatar.png',
+                            'name' => 'artist name',
+                            'text' => 'Play_num + upload_date',
+                            'class' => ''
+                        ]
                     ]
                 ]
             ]);

@@ -4,8 +4,8 @@
   --smoke: #F4F5EF;
   --gray: #E5E5E5;
 
-  --primary: #2F505E;
-  --second: #D75E5B;
+  --primary: #FF0073;
+  --second: #969696;
   --text-body: #282828;
 
   --radius: 5px;
@@ -21,15 +21,16 @@ body {
   margin: 0;
   padding: 0;
   font-size: rem(16px);
-  font-family: 'Arial', sans-serif;
+  font-family: 'Helvetica', sans-serif;
   overflow-wrap: break-word;
   font-weight: 400;
-  color: var(--text-body);
+  color: var(--white);
   overflow-x: hidden;
   line-height: 1.5;
   position: relative;
   width: 100%;
-  background: var(--white);
+  min-height: 100vh;
+  background: radial-gradient(112.75% 112.75% at 14.28% 0.94%, #003C4E 0%, #000000 100%) no-repeat;
 }
 
 a {
@@ -49,7 +50,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Arial', serif;
   font-weight: 700;
   color: var(--primary);
 }
