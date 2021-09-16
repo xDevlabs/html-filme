@@ -4,7 +4,8 @@ template_part('header-user',[
     'page_title' => 'Artics',
     'page_description' => '',
     'class' => 'artis-page',
-    'page' => 'artis'
+    'page' => 'artis',
+    'donate' => true
 ]);
 ?>
 <section class="main">
