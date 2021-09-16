@@ -2,9 +2,9 @@
 <header class="header">
     <div class="container">
         <div class="header__left">
-            <a href="#">
+            <a href="#" class="header__logo">
                 <figure>
-                    <img src="<?php assets('images/logo.svg')?>" alt="">
+                    <img src="<?php assets('images/logo.png')?>" alt="">
                 </figure>
             </a>
             
@@ -15,7 +15,7 @@
 
         <div class="header__right">
             <a href="#" class="btn btn-outline">ログイン</a>
-            <a href="#" class="btn btn-primaary">新規登録</a>
+            <a href="#" class="btn btn-primary">新規登録</a>
         </div>
     </div>
 </header>

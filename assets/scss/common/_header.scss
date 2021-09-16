@@ -1,14 +1,70 @@
 .header {
+    background: #000000;
+    position: relative;
+
+    &::after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        height: 5px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
+    }
+
     .container {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        height: 50px;
     }
 
     &__left {
-        
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        form {
+            input {
+                width: 200px;
+                min-width: initial;
+                height: 29px;
+                background: url(../images/search-icon.svg) no-repeat 10px 6px;
+                background-size: 16px 16px;
+                padding-left: 35px;
+                padding-block: 5px;
+            }
+        }
+    }
+
+    &__logo {
+        margin-right: 30px;
+
+        figure {
+            width: 80px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+        }
     }
 
     &__right {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
 
+        a {
+            width: 120px;
+            height: 30px;
+            min-width: initial;
+            min-height: initial;
+            margin-left: 10px;
+        }
     }
 }
