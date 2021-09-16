@@ -38,7 +38,7 @@ template_part('header-page',[
                             </figure>
                             <div>
                                 <a href="#">user name</a>
-                                <p>info</p>
+                                <p>&nbsp;</p>
                             </div>
                         </div>
                     </div>
@@ -50,11 +50,15 @@ template_part('header-page',[
                 </div>
             </div>
 
+            <div class="video__info">
+                <p>info</p>
+            </div>
+
             <div class="comment__list">
                 
                 <div class="comment-item">
                     <div class="comment-item__title">
-                        <a href="#" class="btn btn-outline">全員参加</a>
+                        <a href="#">全員参加</a>
                         <h3>イベントタイトル</h3>
                     </div>
                     <div class="comment-item__content">
@@ -70,7 +74,7 @@ template_part('header-page',[
                 
                 <div class="comment-item">
                     <div class="comment-item__title">
-                        <a href="#" class="btn btn-outline">全員参加</a>
+                        <a href="#">全員参加</a>
                         <h3>イベントタイトル</h3>
                     </div>
                     <div class="comment-item__content">
@@ -83,8 +87,6 @@ template_part('header-page',[
                         <div class="comment-item__footer"><span>0000/0000pt</span></div>
                     </div>
                 </div>
-
-
             </div>
 
             <div class="more-video">
