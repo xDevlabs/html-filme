@@ -9,22 +9,23 @@ template_part('header-page',[
 ?>
 <section class="main">
     <div class="container">
+        <?php template_part('sidebar-none')?>
         <div class="content">
             <div class="main__tags">
                 <ul>
-                    <li><a href="#">Live</a></li>
-                    <li><a href="#">Live</a></li>
-                    <li><a href="#">Live</a></li>
-                    <li><a href="#">Live</a></li>
-                    <li><a href="#">Live</a></li>
-                    <li><a href="#">Live</a></li>
+                    <li><a href="#" class="btn btn-outline">Live</a></li>
+                    <li><a href="#" class="btn btn-outline">&nbsp;</a></li>
+                    <li><a href="#" class="btn btn-outline">&nbsp;</a></li>
+                    <li><a href="#" class="btn btn-outline">&nbsp;</a></li>
+                    <li><a href="#" class="btn btn-outline">&nbsp;</a></li>
+                    <li><a href="#" class="btn btn-outline">&nbsp;</a></li>
                 </ul>
             </div>
 
             <div class="home__list">
                 <ul class="tablist">
-                    <li class="tab"><a href="#tab1">新規</a></li>
-                    <li class="tab"><a href="#tab1">人気</a></li>
+                    <li class="tab"><a href="#tab1" class="btn btn-outline">新規</a></li>
+                    <li class="tab"><a href="#tab1" class="btn btn-outline active">人気</a></li>
                 </ul>
 
                 <?php 
@@ -88,7 +89,7 @@ template_part('header-page',[
             </div>
         </div>
 
-        <?php template_part('sidebar')?>
+        <?php template_part('sidebar-right')?>
     </div>
 </secti>
 <?php

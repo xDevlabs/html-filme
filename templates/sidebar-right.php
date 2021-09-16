@@ -1,10 +1,11 @@
-<aside class="sidebar">
+<aside class="sidebar-right">
     <div class="sidebar__content">
         <a class="btn btn-primary">コンテンツを販売</a>
         <h3>ピックアップ</h3>
 
         <?php
             template_part('list', [
+                'class' => 'full',
                 'list' => [
                     [
                         'title' => 'Clip title',
