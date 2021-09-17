@@ -24,6 +24,14 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
+
+		.form-search {
+			display: none;
+
+			@include breakpoint(tablet) {
+				display: flex;
+			}
+		}
     }
 
     &__logo {
@@ -54,13 +62,30 @@
             min-width: initial;
             min-height: initial;
             margin-left: 10px;
+
+			&.hamburger {
+				
+				@include breakpoint(tablet){
+					display: block;
+				}
+			}
+
+            &.btn-outline {
+                @include breakpoint-down(767px) {
+                    display: none;
+                }
+            }
         }
         
         .donate {
-            display: flex;
+            display: none;
             align-items: center;
             white-space: nowrap;
             min-width: 220px;
+
+            @include breakpoint(tablet) {
+                display: flex;
+            }
 
             a {
                 line-height: 38px;

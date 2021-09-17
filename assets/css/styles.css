@@ -542,6 +542,11 @@ input[type="submit"] {
     display: flex;
     justify-content: flex-start;
     align-items: center; }
+    .header__left .form-search {
+      display: none; }
+      @media (min-width: 48em) {
+        .header__left .form-search {
+          display: flex; } }
   .header__logo {
     margin-right: 30px; }
     .header__logo figure {
@@ -563,11 +568,20 @@ input[type="submit"] {
       min-width: initial;
       min-height: initial;
       margin-left: 10px; }
+      @media (min-width: 48em) {
+        .header__right a.hamburger {
+          display: block; } }
+      @media only screen and (max-width: 767px) {
+        .header__right a.btn-outline {
+          display: none; } }
     .header__right .donate {
-      display: flex;
+      display: none;
       align-items: center;
       white-space: nowrap;
       min-width: 220px; }
+      @media (min-width: 48em) {
+        .header__right .donate {
+          display: flex; } }
       .header__right .donate a {
         line-height: 38px; }
     .header__right .user {
@@ -634,17 +648,27 @@ input[type="submit"] {
       height: 30px;
       min-height: initial;
       font-size: 15px; }
+      @media only screen and (max-width: 767px) {
+        .home__list ul.tablist li a {
+          min-width: initial; } }
       .home__list ul.tablist li a.active, .home__list ul.tablist li a:hover {
         background: var(--white);
         color: var(--third); }
 
 .main .container {
   display: flex; }
+  @media only screen and (max-width: 767px) {
+    .main .container {
+      flex-wrap: wrap; } }
 
 .login .container {
   display: flex;
   justify-content: center;
   align-items: center; }
+
+@media only screen and (max-width: 767px) {
+  .form {
+    width: 100%; } }
 
 .form-action {
   display: flex;
@@ -670,6 +694,14 @@ input[type="submit"] {
   display: flex;
   justify-content: center;
   align-items: center; }
+  @media only screen and (max-width: 767px) {
+    .form__row {
+      max-width: 320px;
+      margin-inline: auto; } }
+  @media only screen and (max-width: 767px) {
+    .form__row input[type="text"],
+    .form__row .btn {
+      width: 100%; } }
   .form__row label {
     margin-bottom: 0;
     margin-left: 5px; }
@@ -679,11 +711,15 @@ input[type="submit"] {
   flex-wrap: wrap;
   margin-inline: -20px; }
   .video-list li {
-    max-width: calc(50% - 10px);
+    width: 100%;
     border: 1px solid var(--white);
     border-radius: var(--radius);
     padding: 10px;
-    margin: 5px; }
+    margin-bottom: 10px; }
+    @media (min-width: 48em) {
+      .video-list li {
+        max-width: calc(50% - 10px);
+        margin: 5px; } }
     .video-list li .thumbnail {
       height: auto;
       margin: -10px;
@@ -708,10 +744,12 @@ input[type="submit"] {
     width: 100%;
     margin-inline: initial; }
     .video-list.three-items li {
-      max-width: calc(33.333% - 10px);
       padding: 0;
       border: none;
       margin-bottom: 20px; }
+      @media (min-width: 48em) {
+        .video-list.three-items li {
+          max-width: calc(33.333% - 10px); } }
   .video-list .video-item--title {
     display: flex;
     justify-content: space-between;
@@ -725,8 +763,13 @@ input[type="submit"] {
       font-size: 10px;
       line-height: 11.5px;
       color: #969696; }
-  .video-list .video-item figure img {
-    border-radius: 5px 5px 0 0; }
+  .video-list .video-item > figure {
+    margin: -10px;
+    margin-bottom: 10px; }
+    .video-list .video-item > figure img {
+      border-radius: 5px 5px 0 0;
+      width: 100%;
+      object-fit: cover; }
   .video-list .user-info {
     display: flex;
     justify-content: space-between;
@@ -784,16 +827,15 @@ input[type="submit"] {
   margin-bottom: 5px; }
 
 .faq {
-  position: fixed;
+  position: absolute;
   left: 10px;
   bottom: 20px;
   line-height: 1;
-  display: flex;
+  display: none;
   align-items: center; }
   @media (min-width: 48em) {
     .faq {
-      left: 100px;
-      bottom: 100px; } }
+      display: flex; } }
   .faq a {
     color: var(--white);
     display: block;
@@ -814,12 +856,14 @@ input[type="submit"] {
 .content {
   width: 100%;
   max-width: 600px;
-  padding-inline: 10px;
-  border-left: 1px solid #555;
-  border-right: 1px solid #555;
-  margin-inline: auto;
-  min-height: calc(100vh - 51px);
   padding-bottom: 50px; }
+  @media (min-width: 48em) {
+    .content {
+      border-left: 1px solid #555;
+      border-right: 1px solid #555;
+      padding-inline: 10px;
+      margin-inline: auto;
+      min-height: calc(100vh - 51px); } }
 
 .main .container {
   padding-top: 10px; }
@@ -842,22 +886,26 @@ input[type="submit"] {
 
 aside {
   display: block;
-  padding-inline: 10px; }
+  padding-inline: 10px;
+  width: 100%;
+  margin-bottom: 20px; }
   @media (min-width: 48em) {
     aside {
       width: 212px; } }
-  aside.sidebar-left ul li {
-    width: 100%;
-    border-bottom: 1px solid #969696; }
-    aside.sidebar-left ul li a {
-      display: flex;
+  aside.sidebar-left {
+    position: relative; }
+    aside.sidebar-left ul li {
       width: 100%;
-      padding: 5px;
-      min-height: 40px;
-      align-items: center;
-      color: var(--white); }
-    aside.sidebar-left ul li.active a {
-      color: var(--primary); }
+      border-bottom: 1px solid #969696; }
+      aside.sidebar-left ul li a {
+        display: flex;
+        width: 100%;
+        padding: 5px;
+        min-height: 40px;
+        align-items: center;
+        color: var(--white); }
+      aside.sidebar-left ul li.active a {
+        color: var(--primary); }
 
 .more-video {
   margin-top: 30px; }
@@ -867,6 +915,12 @@ aside {
     line-height: 24px;
     color: #ffffff;
     margin-bottom: 10px; }
+
+@media only screen and (max-width: 767px) {
+  .player iframe {
+    width: 100%;
+    height: auto;
+    min-height: 200px; } }
 
 .player .video-detail--title .video--title {
   display: flex;
@@ -903,6 +957,9 @@ aside {
   align-items: center;
   padding-top: 10px;
   border-top: 1px solid #969696; }
+  @media only screen and (max-width: 767px) {
+    .video-detail--footer {
+      flex-wrap: wrap; } }
   .video-detail--footer .user-info__text {
     display: flex;
     justify-content: flex-start;
@@ -915,6 +972,11 @@ aside {
     display: flex;
     justify-content: flex-end;
     align-items: center; }
+    @media only screen and (max-width: 767px) {
+      .video-detail--footer .info-course {
+        margin-block: 10px;
+        justify-content: space-between;
+        width: 100%; } }
     .video-detail--footer .info-course .share-social {
       border: 1px solid var(--white);
       padding: 5px;
@@ -999,6 +1061,9 @@ aside {
   border-bottom: 1px solid #555555;
   margin-bottom: 6px;
   padding: 20px; }
+  @media only screen and (max-width: 767px) {
+    .user-detail {
+      flex-wrap: wrap; } }
   .user-detail--info {
     display: flex; }
     .user-detail--info figure {
@@ -1030,8 +1095,16 @@ aside {
     line-height: 9px;
     color: #FF256F; }
 
+@media only screen and (max-width: 767px) {
+  .user-share {
+    margin-top: 20px; } }
+
 .user-share ul {
   display: flex; }
+  @media only screen and (max-width: 767px) {
+    .user-share ul {
+      width: 100%;
+      justify-content: space-around; } }
   .user-share ul li {
     margin-left: 10px;
     display: flex;
@@ -1042,9 +1115,16 @@ aside {
     line-height: 9px;
     text-align: center;
     color: #FFFFFF; }
+    @media only screen and (max-width: 767px) {
+      .user-share ul li {
+        margin-right: 10px; } }
     .user-share ul li img {
       max-width: 30px;
       max-height: 30px; }
+    .user-share ul li a {
+      display: flex;
+      flex-direction: column;
+      color: var(--white); }
 
 .user-list h3 {
   font-size: 16px;
@@ -1063,8 +1143,11 @@ aside {
 .search-music {
   margin-block: 10px; }
   .search-music input {
-    min-width: 320px;
-    width: initial; }
+    width: initial;
+    width: 100%; }
+    @media (min-width: 48em) {
+      .search-music input {
+        max-width: 320px; } }
 
 .breadcurmbs {
   margin-bottom: 20px; }
@@ -1086,7 +1169,7 @@ aside {
     border-radius: 50px;
     display: block;
     width: 100px;
-    height: 24px;
+    line-height: 24px;
     text-align: center;
     font-size: 12px;
     letter-spacing: -0.132857px;
@@ -1103,6 +1186,10 @@ aside {
     .user-panel table.login-info tr td {
       height: 38px;
       padding: 10px; }
+      @media only screen and (max-width: 767px) {
+        .user-panel table.login-info tr td {
+          display: block;
+          height: initial; } }
       .user-panel table.login-info tr td a {
         border: 1px solid var(--primary);
         color: var(--white);
@@ -1115,8 +1202,9 @@ aside {
         justify-content: center;
         align-content: center;
         align-self: flex-end; }
-      .user-panel table.login-info tr td:last-child {
-        text-align: right; }
+      @media (min-width: 48em) {
+        .user-panel table.login-info tr td:last-child {
+          text-align: right; } }
       .user-panel table.login-info tr td .form-submit {
         display: flex;
         justify-content: space-between;
@@ -1131,6 +1219,10 @@ aside {
           justify-content: center;
           align-items: center;
           color: var(--white); }
+  @media only screen and (max-width: 767px) {
+    .user-panel table.payment tr td {
+      display: block;
+      margin-bottom: 10px; } }
   .user-panel table.payment tr td input {
     height: 35px;
     min-height: initial;

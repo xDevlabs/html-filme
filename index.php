@@ -9,7 +9,7 @@ template_part('header-page',[
 ?>
 <section class="main">
     <div class="container">
-        <?php template_part('sidebar-none')?>
+        <?php template_part('sidebar-left')?>
         <div class="content">
             <div class="main__tags">
                 <ul>

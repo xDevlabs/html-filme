@@ -18,6 +18,8 @@ template_part('header-user',[
                     <a href="user-content.php">購入コンテンツ</a>
                 </li>
             </ul>
+
+            <?php template_part('faq');?>
         </aside>
         <div class="content">
             <div class="breadcurmbs">

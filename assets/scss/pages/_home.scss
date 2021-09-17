@@ -62,6 +62,10 @@
                         min-height: initial;
                         font-size: 15px;
 
+                        @include breakpoint-down(767px) {
+                            min-width: initial;
+                        }
+
                         &.active,
                         &:hover {
                             background: var(--white);
@@ -73,9 +77,14 @@
         }
     }
 }
+
 .main {
     .container {
         display: flex;
+
+        @include breakpoint-down(767px) {
+            flex-wrap: wrap;
+        }
     }
 }
 
@@ -88,6 +97,10 @@
 }
 
 .form {
+    @include breakpoint-down(767px) {
+        width: 100%;
+    }
+
     &-action {
         display: flex;
         justify-content: center;
@@ -120,6 +133,18 @@
         justify-content: center;
         align-items: center;
 
+        @include breakpoint-down(767px) {
+            max-width: 320px;
+            margin-inline: auto;
+        }
+
+        input[type="text"],
+        .btn {
+            @include breakpoint-down(767px) {
+                width: 100%;
+            }
+        }
+
         label {
             margin-bottom: 0;
             margin-left: 5px;
@@ -134,11 +159,16 @@
     margin-inline: -20px;
 
     li {
-        max-width: calc(50% - 10px);
+        width: 100%;
         border: 1px solid var(--white);
         border-radius: var(--radius);
         padding: 10px;
-        margin: 5px;
+        margin-bottom: 10px;
+
+        @include breakpoint(tablet) {
+            max-width: calc(50% - 10px);
+            margin: 5px;
+        }
 
         .thumbnail {
             height: auto;
@@ -176,10 +206,13 @@
         margin-inline: initial;
 
         li {
-            max-width: calc(33.333% - 10px);
             padding: 0;
             border: none;
             margin-bottom: 20px;
+
+            @include breakpoint(tablet) {
+                max-width: calc(33.333% - 10px);
+            }
         }
     }
 
@@ -207,9 +240,14 @@
             }
         }
 
-        figure {
+        > figure {
+            margin: -10px;
+            margin-bottom: 10px;
+
             img {
                 border-radius: 5px 5px 0 0;
+                width: 100%;
+                object-fit: cover;
             }
         }
     }
@@ -293,16 +331,16 @@
 }
 
 .faq {
-    position: fixed;
+    position: absolute;
     left: 10px;
     bottom: 20px;
     line-height: 1;
-    display: flex;
+    display: none;
     align-items: center;
+    
 
     @include breakpoint(tablet) {
-        left: 100px;
-        bottom: 100px;
+        display: flex;
     }
 
     a {
@@ -332,12 +370,15 @@
 .content {
     width: 100%;
     max-width: 600px;
-    padding-inline: 10px;
-    border-left: 1px solid #555;
-    border-right: 1px solid #555;
-    margin-inline: auto;
-    min-height: calc(100vh - 51px);
     padding-bottom: 50px;
+
+    @include breakpoint(tablet) {
+        border-left: 1px solid #555;
+        border-right: 1px solid #555;
+        padding-inline: 10px;
+        margin-inline: auto;
+        min-height: calc(100vh - 51px);
+    }
 }
 
 .main {
@@ -373,12 +414,16 @@
 aside {
     display: block;
     padding-inline: 10px;
+    width: 100%;
+    margin-bottom: 20px;
 
     @include breakpoint(tablet) {
         width: 212px;
     }
 
     &.sidebar-left {
+        position: relative;
+
         ul {
             @extend %reset-list;
             li {
@@ -416,6 +461,13 @@ aside {
 }
 
 .player {
+    iframe {
+        @include breakpoint-down(767px) {
+            width: 100%;
+            height: auto;
+            min-height: 200px;
+        }
+    }
     .video-detail--title {
         .video--title {
             display: flex;
@@ -461,6 +513,10 @@ aside {
     padding-top: 10px;
     border-top: 1px solid #969696;
 
+    @include breakpoint-down(767px) {
+        flex-wrap: wrap;
+    }
+
     .user-info__text {
         display: flex;
         justify-content: flex-start;
@@ -477,6 +533,12 @@ aside {
         display: flex;
         justify-content: flex-end;
         align-items: center;
+
+        @include breakpoint-down(767px) {
+            margin-block: 10px;
+            justify-content: space-between;
+            width: 100%;
+        }
 
         .share-social {
             @extend %share-social;
@@ -587,6 +649,10 @@ aside {
     margin-bottom: 6px;
     padding: 20px;
 
+    @include breakpoint-down(767px) {
+        flex-wrap: wrap;
+    }
+
     &--info {
         display: flex;
         
@@ -635,10 +701,17 @@ aside {
 }
 
 .user-share {
-
+    @include breakpoint-down(767px){
+        margin-top: 20px;
+    }
     ul {
         @extend %reset-list;
         display: flex;
+
+        @include breakpoint-down(767px) {
+            width: 100%;
+            justify-content: space-around;
+        }
 
         li {
             margin-left: 10px;
@@ -650,10 +723,20 @@ aside {
             line-height: 9px;
             text-align: center;
             color: #FFFFFF;
+
+            @include breakpoint-down(767px) {
+                margin-right: 10px;
+            }
             
             img {
                 max-width: 30px;
                 max-height: 30px;
+            }
+
+            a {
+                display: flex;
+                flex-direction: column;
+                color: var(--white);
             }
         }
     }
@@ -686,8 +769,12 @@ aside {
     margin-block: 10px;
 
     input {
-        min-width: 320px;
         width: initial;
+        width: 100%;
+
+        @include breakpoint(tablet) {
+            max-width: 320px;
+        }
     }
 }
 
@@ -721,7 +808,7 @@ aside {
             border-radius: 50px;
             display: block;
             width: 100px;
-            height: 24px;
+            line-height: 24px;
             text-align: center;
             font-size: 12px;
             letter-spacing: -0.132857px;
@@ -744,6 +831,11 @@ aside {
                     height: 38px;
                     padding: 10px;
 
+                    @include breakpoint-down(767px) {
+                        display: block;
+                        height: initial;
+                    }
+
                     a {
                         border: 1px solid var(--primary);
                         color: var(--white);
@@ -759,7 +851,9 @@ aside {
                     }
 
                     &:last-child {
-                        text-align: right;
+                        @include breakpoint(tablet) {
+                            text-align: right;
+                        }
                     }
 
                     .form-submit {
@@ -787,6 +881,11 @@ aside {
             tr {
 
                 td {
+                    @include breakpoint-down(767px) {
+                        display: block;
+                        margin-bottom: 10px;
+                    }
+
                     input {
                         height: 35px;
                         min-height: initial;
