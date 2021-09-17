@@ -15,15 +15,15 @@ template_part('header',[
 
         <form action="#" method="POST" class="form">
             <div class="form__row">
-                <input type="text" name="user-name">
+                <input type="text" name="user-name" placeholder="メールアドレス">
             </div>
             
             <div class="form__row">
-                <input type="text" name="user-password">
+                <input type="text" name="user-email" placeholder="パスワード">
             </div>
 
             <div class="form__row">
-                <button class="btn btn-gradient"></button>
+                <button class="btn btn-gradient">ログイン</button>
             </div>
 
             <div class="form__row mt-35">

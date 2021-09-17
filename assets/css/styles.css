@@ -594,7 +594,7 @@ input[type="submit"] {
   text-align: center;
   display: flex;
   flex-direction: column;
-  background: url(../images/like-inactive.svg) #000 no-repeat center top;
+  background: url(../images/like-inactive.svg) no-repeat center top;
   width: 16px;
   height: 14px;
   padding-top: 18px;
@@ -604,7 +604,7 @@ input[type="submit"] {
   .video-list .video-item--title .action a, .player .video-detail--title .action a {
     color: var(--white); }
   .video-list .video-item--title .active.action, .player .video-detail--title .active.action, .video-list .video-item--title .action:hover, .player .video-detail--title .action:hover {
-    background: url(../images/like-active.svg) #000 no-repeat center top;
+    background: url(../images/like-active.svg) no-repeat center top;
     background-size: contain; }
 
 .video-list .info-course .share-social, .video-detail--footer .info-course .share-social {

@@ -42,6 +42,73 @@ template_part('header-user',[
                 </a>
             </div>
 
+            <div class="user-panel">
+                <div class="avatar__show">
+                    <figure>
+                        <img src="<?php assets('images/mycon.png')?>" alt="">
+                    </figure>
+                    <a href="#">アップロード</a>
+                </div>
+
+                <table class="login-info">
+                    <tr>
+                        <td>ID</td>
+                        <td>1599355</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>名前</td>
+                        <td>User</td>
+                        <td><a href="#">編集</a></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>xxxxx@xxx.jp</td>
+                        <td><a href="#">編集</a></td>
+                    </tr>
+                    <tr>
+                        <td>パスワード</td>
+                        <td>●●●●●●●●</td>
+                        <td><a href="#">編集</a></td>
+                    </tr>
+                    
+                </table>
+
+                <h3 class="paymemnt-heading">クレジット情報</h3>
+                <form action="#">
+                    <table class="payment">
+                        <tr>
+                            <td>カード番号</td>
+                            <td>
+                                <input type="text" placeholder="1234 1234 1234 1234">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>有効期限</td>
+                            <td>
+                                <input type="text" placeholder="月/年" class="small">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>セキュリティーコード</td>
+                            <td>
+                                <input type="text" placeholder="CVC" class="small">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" class="form-submit">
+                                <button>決定</button>
+                                <button>キャンセル</button>
+                            </td>
+                        </tr>
+                    </table>
+                
+                </form>
+                
+            </div>
         </div>
 
         <?php template_part('sidebar-none')?>

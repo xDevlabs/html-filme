@@ -24,11 +24,11 @@ template_part('header-user',[
             <div class="main__tags">
                 <ul>
                     <li><a href="#" class="btn btn-outline">Live</a></li>
-                    <li><a href="#" class="btn btn-outline">&nbsp;</a></li>
-                    <li><a href="#" class="btn btn-outline">&nbsp;</a></li>
-                    <li><a href="#" class="btn btn-outline">&nbsp;</a></li>
-                    <li><a href="#" class="btn btn-outline">&nbsp;</a></li>
-                    <li><a href="#" class="btn btn-outline">&nbsp;</a></li>
+                    <li><a href="#" class="btn btn-outline">演劇</a></li>
+                    <li><a href="#" class="btn btn-outline">スポーツ</a></li>
+                    <li><a href="#" class="btn btn-outline">映画</a></li>
+                    <li><a href="#" class="btn btn-outline">クラシック</a></li>
+                    <li><a href="#" class="btn btn-outline">イベント</a></li>
                 </ul>
             </div>
 

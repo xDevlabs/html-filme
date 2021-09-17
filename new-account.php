@@ -15,15 +15,15 @@ template_part('header',[
         <p>新規登録をする</p>
         <form action="#" method="POST" class="form">
             <div class="form__row">
-                <input type="text" name="user-name">
+                <input type="text" name="user-name" placeholder="ニックネーム">
             </div>
             
             <div class="form__row">
-                <input type="text" name="user-password">
+                <input type="text" name="user-email" placeholder="メールアドレス">
             </div>
 
             <div class="form__row">
-                <input type="text" name="user-email">
+                <input type="text" name="user-id" placeholder="パスワード">
             </div>
 
             <div class="form__row mx-30">
@@ -32,9 +32,8 @@ template_part('header',[
             </div>
 
             <div class="form__row">
-                <button class="btn btn-gradient"></button>
+                <button class="btn btn-gradient">新規登録</button>
             </div>
-            
         </form>
     </div>
 </div>

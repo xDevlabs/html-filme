@@ -5,7 +5,7 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    background: url(../images/like-inactive.svg) #000 no-repeat center top;
+    background: url(../images/like-inactive.svg)  no-repeat center top;
     width: 16px;
     height: 14px;
     padding-top: 18px;
@@ -19,7 +19,7 @@
 
     &.active,
     &:hover {
-        background: url(../images/like-active.svg) #000 no-repeat center top;
+        background: url(../images/like-active.svg)  no-repeat center top;
         background-size: contain;
     }
 }
