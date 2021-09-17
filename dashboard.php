@@ -100,8 +100,10 @@ template_part('header-user',[
 
                         <tr>
                             <td colspan="2" class="form-submit">
-                                <button>決定</button>
-                                <button>キャンセル</button>
+                                <div class="button-list">
+                                    <button>決定</button>
+                                    <button>キャンセル</button>
+                                </div>
                             </td>
                         </tr>
                     </table>

@@ -818,7 +818,8 @@ input[type="submit"] {
   border-left: 1px solid #555;
   border-right: 1px solid #555;
   margin-inline: auto;
-  min-height: calc(100vh - 51px); }
+  min-height: calc(100vh - 51px);
+  padding-bottom: 50px; }
 
 .main .container {
   padding-top: 10px; }
@@ -1064,3 +1065,100 @@ aside {
   .search-music input {
     min-width: 320px;
     width: initial; }
+
+.breadcurmbs {
+  margin-bottom: 20px; }
+  .breadcurmbs a {
+    display: flex;
+    align-items: center;
+    color: var(--white); }
+
+.user-panel .avatar__show {
+  display: flex;
+  align-items: flex-end; }
+  .user-panel .avatar__show figure {
+    width: 120px;
+    height: 120px; }
+    .user-panel .avatar__show figure img {
+      border-radius: 50%;
+      border: 1px solid var(--primary); }
+  .user-panel .avatar__show a {
+    border-radius: 50px;
+    display: block;
+    width: 100px;
+    height: 24px;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: -0.132857px;
+    color: var(--white);
+    border: 1px solid var(--primary);
+    margin-left: 20px; }
+
+.user-panel table {
+  width: 100%;
+  margin-top: 20px; }
+  .user-panel table.login-info tr {
+    border-top: 1px solid #333333;
+    border-bottom: 1px solid #333333; }
+    .user-panel table.login-info tr td {
+      height: 38px;
+      padding: 10px; }
+      .user-panel table.login-info tr td a {
+        border: 1px solid var(--primary);
+        color: var(--white);
+        background: rgba(51, 51, 51, 0.5);
+        display: block;
+        border-radius: 50px;
+        width: 100px;
+        height: 24px;
+        display: inline-flex;
+        justify-content: center;
+        align-content: center;
+        align-self: flex-end; }
+      .user-panel table.login-info tr td:last-child {
+        text-align: right; }
+      .user-panel table.login-info tr td .form-submit {
+        display: flex;
+        justify-content: space-between;
+        max-width: 300px;
+        width: 100%;
+        align-items: center;
+        align-self: center; }
+        .user-panel table.login-info tr td .form-submit a {
+          border: 1px solid var(--primary);
+          border-radius: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: var(--white); }
+  .user-panel table.payment tr td input {
+    height: 35px;
+    min-height: initial;
+    padding: 5px;
+    margin-block: 5px; }
+    .user-panel table.payment tr td input.small {
+      max-width: 80px;
+      min-width: initial; }
+
+.user-panel .paymemnt-heading {
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  margin-top: 30px; }
+
+.user-panel .button-list {
+  display: flex;
+  max-width: 300px;
+  margin-inline: auto;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px; }
+  .user-panel .button-list button {
+    border: 1px solid var(--primary);
+    background: rgba(51, 51, 51, 0.5);
+    width: 100px;
+    height: 24px;
+    min-width: initial;
+    min-height: initial;
+    padding: 5px;
+    border-radius: 50px; }
