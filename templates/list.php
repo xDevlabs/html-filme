@@ -3,7 +3,7 @@
         <li>
             <div class="video-item">
                 <a href="#">
-                    <figure class="thubnail">
+                    <figure class="thumbnail">
                         <img src="<?php assets($item['image'])?>" alt="">
                     </figure>
                 </a>

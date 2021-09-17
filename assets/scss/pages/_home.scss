@@ -156,7 +156,7 @@
     @extend %reset-list;
     display: flex;
     flex-wrap: wrap;
-    margin-inline: -20px;
+    margin-inline: -5px!important;
 
     li {
         width: 100%;
@@ -190,7 +190,7 @@
     }
 
     &.full {
-        margin-inline: initial;
+        margin-inline: initial!important;
         width: 100%;
 
         li {
@@ -203,7 +203,7 @@
 
     &.three-items {
         width: 100%;
-        margin-inline: initial;
+        margin-inline: initial!important;
 
         li {
             padding: 0;
@@ -240,9 +240,7 @@
             }
         }
 
-        > figure {
-            margin: -10px;
-            margin-bottom: 10px;
+        figure {
 
             img {
                 border-radius: 5px 5px 0 0;
