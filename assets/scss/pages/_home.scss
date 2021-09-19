@@ -15,6 +15,7 @@
 
     a {
         color: var(--white);
+        white-space: nowrap;
     }
 
     &.active,
@@ -198,6 +199,10 @@
             padding: 0;
             border: none;
             margin-bottom: 20px;
+
+            .thumbnail {
+                margin: 0;
+            }
         }
     }
 
@@ -212,6 +217,10 @@
 
             @include breakpoint(tablet) {
                 max-width: calc(33.333% - 10px);
+            }
+
+            .thumbnail {
+                margin: 0;
             }
         }
     }
