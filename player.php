@@ -1,10 +1,11 @@
 <?php
 include_once "includes/functions.php";
-template_part('header-page',[
+template_part('header-user',[
     'page_title' => 'Player page',
     'page_description' => '',
     'class' => 'player-page',
-    'page' => 'player'
+    'page' => 'player',
+    'donate' => true
 ]);
 ?>
 <section class="main">

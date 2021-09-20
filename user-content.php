@@ -4,7 +4,8 @@ template_part('header-user',[
     'page_title' => '購入コンテンツ',
     'page_description' => '',
     'class' => 'user-page',
-    'page' => 'user-content'
+    'page' => 'user-content',
+    'donate' => true
 ]);
 ?>
 <section class="main">

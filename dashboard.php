@@ -4,7 +4,8 @@ template_part('header-user',[
     'page_title' => 'アカウント',
     'page_description' => '',
     'class' => 'dashboard-page',
-    'page' => 'dashboard'
+    'page' => 'dashboard',
+    'donate' => true
 ]);
 ?>
 <section class="main">
