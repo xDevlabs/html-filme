@@ -1,6 +1,8 @@
 <aside class="sidebar-right">
     <div class="sidebar__content">
-        <a class="btn btn-primary">コンテンツを販売</a>
+        <?php if (isset($button)):?>
+            <a class="btn btn-primary">コンテンツを販売</a>
+        <?php endif;?>
         <h3>ピックアップ</h3>
 
         <?php
