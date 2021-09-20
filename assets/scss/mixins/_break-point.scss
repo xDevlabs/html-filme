@@ -20,7 +20,7 @@ $break-1824: 114em;
 \*------------------------------------*/
 @mixin breakpoint($point) {
   @if $point == tablet {
-    @media (min-width: $break-768) { @content; }
+    @media (min-width: $break-600) { @content; }
   }
 
   @else if $point == desktop {

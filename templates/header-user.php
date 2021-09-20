@@ -2,7 +2,7 @@
 <header class="header">
     <div class="container">
         <div class="header__left">
-            <a href="#" class="header__logo">
+            <a href="index.php" class="header__logo">
                 <figure>
                     <img src="<?php assets('images/logo.png')?>" alt="">
                 </figure>
@@ -26,6 +26,7 @@
 
                     <a href="#">保有ポイント　500pt</a>
                 </div>
+                <a class="btn btn-primary btn-header">コンテンツを販売</a>
             <?php endif;?>
 
             <div class="user">

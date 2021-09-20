@@ -89,7 +89,7 @@ template_part('header-page',[
             </div>
         </div>
 
-        <?php template_part('sidebar-right')?>
+        <?php template_part('sidebar-right', ['button' => true])?>
     </div>
 </secti>
 <?php

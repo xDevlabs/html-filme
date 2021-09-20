@@ -2,7 +2,7 @@
 <header class="header">
     <div class="container">
         <div class="header__left">
-            <a href="#" class="header__logo">
+            <a href="index.php" class="header__logo">
                 <figure>
                     <img src="<?php assets('images/logo.png')?>" alt="">
                 </figure>

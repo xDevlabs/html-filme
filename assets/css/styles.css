@@ -316,42 +316,42 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 2.25rem;
   line-height: 1.3; }
-  @media (min-width: 48em) {
+  @media (min-width: 37em) {
     h1 {
       font-size: 2.875rem; } }
 
 h2 {
   font-size: 2.5rem;
   line-height: 1.15; }
-  @media (min-width: 48em) {
+  @media (min-width: 37em) {
     h2 {
       font-size: 3.5rem; } }
 
 h3 {
   font-size: 2.125rem;
   line-height: 1.16; }
-  @media (min-width: 48em) {
+  @media (min-width: 37em) {
     h3 {
       font-size: 2.5rem; } }
 
 h4 {
   font-size: 1.75rem;
   line-height: 1.16; }
-  @media (min-width: 48em) {
+  @media (min-width: 37em) {
     h4 {
       font-size: 2.25rem; } }
 
 h5 {
   font-size: 1.25rem;
   line-height: 1.2; }
-  @media (min-width: 48em) {
+  @media (min-width: 37em) {
     h5 {
       font-size: 1.5rem; } }
 
 h6 {
   font-size: 1.125rem;
   line-height: 1.3; }
-  @media (min-width: 48em) {
+  @media (min-width: 37em) {
     h6 {
       font-size: 1.25rem; } }
 
@@ -384,7 +384,7 @@ select {
   border-radius: var(--radius);
   padding: 11px 24px;
   outline: none !important; }
-  @media (min-width: 48em) {
+  @media (min-width: 37em) {
     input[type="text"],
     input[type="email"],
     input[type="password"],
@@ -414,7 +414,7 @@ input[type="submit"] {
   border: 1px solid #979797;
   box-sizing: border-box;
   border: 0; }
-  @media (min-width: 48em) {
+  @media (min-width: 37em) {
     .btn,
     button,
     input[type="button"],
@@ -469,7 +469,7 @@ input[type="submit"] {
 
 .container-fluid {
   max-width: 1920px; }
-  @media (min-width: 48em) {
+  @media (min-width: 37em) {
     .container-fluid {
       padding: 0 64px; } }
 
@@ -544,20 +544,21 @@ input[type="submit"] {
     align-items: center; }
     .header__left .form-search {
       display: none; }
-      @media (min-width: 48em) {
+      @media (min-width: 37em) {
         .header__left .form-search {
           display: flex; } }
-  .header__logo {
-    margin-right: 30px; }
-    .header__logo figure {
-      width: 80px;
-      height: 40px;
-      display: flex;
-      justify-content: center; }
-      .header__logo figure img {
-        width: 100%;
-        height: auto;
-        object-fit: contain; }
+  @media (min-width: 37em) {
+    .header__logo {
+      margin-right: 30px; } }
+  .header__logo figure {
+    width: 80px;
+    height: 40px;
+    display: flex;
+    justify-content: center; }
+    .header__logo figure img {
+      width: 100%;
+      height: auto;
+      object-fit: contain; }
   .header__right {
     display: flex;
     justify-content: flex-end;
@@ -568,22 +569,20 @@ input[type="submit"] {
       min-width: initial;
       min-height: initial;
       margin-left: 10px; }
-      @media (min-width: 48em) {
+      @media (min-width: 37em) {
         .header__right a.hamburger {
           display: block; } }
-      @media only screen and (max-width: 767px) {
-        .header__right a.btn-outline {
-          display: none; } }
     .header__right .donate {
       display: none;
       align-items: center;
       white-space: nowrap;
-      min-width: 220px; }
-      @media (min-width: 48em) {
+      min-width: 195px; }
+      @media (min-width: 37em) {
         .header__right .donate {
           display: flex; } }
       .header__right .donate a {
-        line-height: 38px; }
+        line-height: 38px;
+        width: initial; }
     .header__right .user {
       display: flex;
       align-items: center;
@@ -599,6 +598,11 @@ input[type="submit"] {
   background-size: 16px 16px;
   padding-left: 35px;
   padding-block: 5px; }
+
+.btn-header {
+  white-space: nowrap;
+  width: initial;
+  margin-right: 10px; }
 
 /** Pages */
 .video-list .video-item--title .action, .player .video-detail--title .action {
@@ -616,7 +620,8 @@ input[type="submit"] {
   background-size: contain;
   cursor: pointer; }
   .video-list .video-item--title .action a, .player .video-detail--title .action a {
-    color: var(--white); }
+    color: var(--white);
+    white-space: nowrap; }
   .video-list .video-item--title .active.action, .player .video-detail--title .active.action, .video-list .video-item--title .action:hover, .player .video-detail--title .action:hover {
     background: url(../images/like-active.svg) no-repeat center top;
     background-size: contain; }
@@ -716,7 +721,7 @@ input[type="submit"] {
     border-radius: var(--radius);
     padding: 10px;
     margin-bottom: 10px; }
-    @media (min-width: 48em) {
+    @media (min-width: 37em) {
       .video-list li {
         max-width: calc(50% - 10px);
         margin: 5px; } }
@@ -740,6 +745,8 @@ input[type="submit"] {
       padding: 0;
       border: none;
       margin-bottom: 20px; }
+      .video-list.full li .thumbnail {
+        margin: 0; }
   .video-list.three-items {
     width: 100%;
     margin-inline: initial !important; }
@@ -747,9 +754,11 @@ input[type="submit"] {
       padding: 0;
       border: none;
       margin-bottom: 20px; }
-      @media (min-width: 48em) {
+      @media (min-width: 37em) {
         .video-list.three-items li {
           max-width: calc(33.333% - 10px); } }
+      .video-list.three-items li .thumbnail {
+        margin: 0; }
   .video-list .video-item--title {
     display: flex;
     justify-content: space-between;
@@ -830,7 +839,7 @@ input[type="submit"] {
   line-height: 1;
   display: none;
   align-items: center; }
-  @media (min-width: 48em) {
+  @media (min-width: 37em) {
     .faq {
       display: flex; } }
   .faq a {
@@ -854,7 +863,7 @@ input[type="submit"] {
   width: 100%;
   max-width: 600px;
   padding-bottom: 50px; }
-  @media (min-width: 48em) {
+  @media (min-width: 37em) {
     .content {
       border-left: 1px solid #555;
       border-right: 1px solid #555;
@@ -886,7 +895,7 @@ aside {
   padding-inline: 10px;
   width: 100%;
   margin-bottom: 20px; }
-  @media (min-width: 48em) {
+  @media (min-width: 37em) {
     aside {
       width: 212px; } }
   aside.sidebar-left {
@@ -1142,7 +1151,7 @@ aside {
   .search-music input {
     width: initial;
     width: 100%; }
-    @media (min-width: 48em) {
+    @media (min-width: 37em) {
       .search-music input {
         max-width: 320px; } }
 
@@ -1199,7 +1208,7 @@ aside {
         justify-content: center;
         align-content: center;
         align-self: flex-end; }
-      @media (min-width: 48em) {
+      @media (min-width: 37em) {
         .user-panel table.login-info tr td:last-child {
           text-align: right; } }
       .user-panel table.login-info tr td .form-submit {
